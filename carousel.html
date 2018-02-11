@@ -1,0 +1,456 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel="stylesheet" href="css/normalize.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script>
+  $(document).ready(function(){
+    // 画像とドットの動き
+    // var loop = setInterval(
+    //   function() {
+    //     $(".carousel-btn:last").prependTo(".carousel-btns");
+    //     $(".carousel-moving").animate({
+    //       marginLeft : parseInt($(".carousel-moving").css("margin-left"))-400+"px"
+    //     },
+    //     "fast","swing",
+    //     function() {
+    //       $(".carousel-moving").css("margin-left","-80px");
+    //       $(".carousel-image:first").appendTo(".carousel-moving");
+    //     });
+    //   }, 1500);
+    var x = 1;
+    var loop = setInterval(
+      function() {
+        x ++;
+        $('.btn'+ x).addClass('green');
+        $('.btn'+ x).prev().removeClass('green');
+        if(x == 7){
+          x = 1;
+          $('.btn1').addClass('green');
+          $('.btn'+ 6).removeClass('green');
+        };
+        $(".carousel-moving").animate({
+          marginLeft : parseInt($(".carousel-moving").css("margin-left"))-400+"px"
+        },
+        "fast","swing",
+        function() {
+          $(".carousel-moving").css("margin-left","-80px");
+          $(".carousel-image:first").appendTo(".carousel-moving");
+        });
+      }, 1500);
+      // $(".carousel").hover(
+      //   function(){
+      //     clearInterval(loop);
+      //   },function(){
+      //     loop = setInterval(
+      //       function() {
+      //         $(".carousel-btn:last").prependTo(".carousel-btns");
+      //         $(".carousel-moving").animate({
+      //           marginLeft : parseInt($(".carousel-moving").css("margin-left"))-400+"px"
+      //         },
+      //         "fast","swing",
+      //         function() {
+      //           $(".carousel-moving").css("margin-left","-80px");
+      //           $(".carousel-image:first").appendTo(".carousel-moving");
+      //         });
+      //       }, 1500);
+      //     });
+      $(".carousel").hover(
+        function(){
+          clearInterval(loop);
+        },function(){
+          loop = setInterval(
+            function() {
+              x ++;
+              $('.btn'+ x).addClass('green');
+              $('.btn'+ x).prev().removeClass('green');
+              if(x == 7){
+                x = 1;
+                $('.btn1').addClass('green');
+                $('.btn6').removeClass('green');
+              };
+              $(".carousel-moving").animate({
+                marginLeft : parseInt($(".carousel-moving").css("margin-left"))-400+"px"
+              },
+              "fast","swing",
+              function() {
+                $(".carousel-moving").css("margin-left","-80px");
+                $(".carousel-image:first").appendTo(".carousel-moving");
+              });
+            }, 1500);
+          });
+
+          $('.btn1').click(
+            function(){
+              if (x == 2){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 1;
+              }
+              if (x == 3){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 1;
+              }
+              if (x == 4){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 1;
+              }
+              if (x == 5){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 1;
+              }
+              if (x == 6){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 1;
+              }
+            }
+          );
+          $('.btn2').click(
+            function(){
+              if (x == 3){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 2;
+              }
+              if (x == 4){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 2;
+              }
+              if (x == 5){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 2;
+              }
+              if (x == 6){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 2;
+              }
+              if (x == 1){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 2;
+              }
+            }
+          );
+          $('.btn3').click(
+            function(){
+              if (x == 4){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 3;
+              }
+              if (x == 5){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 3;
+              }
+              if (x == 6){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 3;
+              }
+              if (x == 1){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 3;
+              }
+              if (x == 2){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 3;
+              }
+            }
+          );
+          $('.btn4').click(
+            function(){
+              if (x == 5){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 4;
+              }
+              if (x == 6){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 4;
+              }
+              if (x == 1){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 4;
+              }
+              if (x == 2){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 4;
+              }
+              if (x == 3){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 4;
+              }
+            }
+          );
+          $('.btn5').click(
+            function(){
+              if (x == 6){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 5;
+              }
+              if (x == 1){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 5;
+              }
+              if (x == 2){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 5;
+              }
+              if (x == 3){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 5;
+              }
+              if (x == 4){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 5;
+              }
+            }
+          );
+          $('.btn6').click(
+            function(){
+              if (x == 1){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 6;
+              }
+              if (x == 2){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 6;
+              }
+              if (x == 3){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 6;
+              }
+              if (x == 4){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 6;
+              }
+              if (x == 5){
+              $(".carousel-moving").css("margin-left","-80px");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(".carousel-image:last").prependTo(".carousel-moving");
+              $(this).addClass('green');
+              $('.btn'+ x).removeClass('green');
+              x = 6;
+              }
+            }
+          );
+        });
+        </script>
+
+        <style>
+        .carousel {
+          width: 980px;
+        }
+        .carousel-container {
+          height: 100px;
+          border: solid;
+          overflow: hidden;
+          position: relative;
+        }
+        .carousel-moving {
+          height: 100px;
+          margin-left: -80px;
+          position: absolute;
+          width: 2400px;
+        }
+        .carousel-image {
+          display: inline-block;
+        }
+        .carousel img {
+          height: 100px;
+          width: 400px;
+          vertical-align: middle;
+        }
+        .carousel-btns {
+          text-align: center;
+        }
+        .carousel-btn {
+          width: 10px;
+          height: 10px;
+          margin: 5px;
+          background: #D6D6D6;
+          display: block;
+          border-radius: 30px;
+          display: inline-block;
+        }
+        .carousel-btn:hover {
+          background:#50BAA1;
+        }
+        .green {
+          background:#50BAA1;
+        }
+        </style>
+
+      </head>
+      <body>
+        <div class="carousel">
+          <div class="carousel-container">
+            <div class="carousel-moving">
+              <div class="carousel-image"><img src="image/logo_startup.png" alt=""></div>
+              <div class="carousel-image"><img src="image/fujitv.jpg" alt=""></div>
+              <div class="carousel-image"><img src="image/nhk.png" alt=""></div>
+              <div class="carousel-image"><img src="image/diamond.png" alt=""></div>
+              <div class="carousel-image"><img src="image/nikkeibp.png" alt=""></div>
+              <div class="carousel-image"><img src="image/logo-japan-times.png" alt=""></div>
+              <div class="carousel-image"><img src="image/logo_startup.png" alt=""></div>
+              <div class="carousel-image"><img src="image/fujitv.jpg" alt=""></div>
+              <div class="carousel-image"><img src="image/nhk.png" alt=""></div>
+              <div class="carousel-image"><img src="image/diamond.png" alt=""></div>
+              <div class="carousel-image"><img src="image/nikkeibp.png" alt=""></div>
+              <div class="carousel-image"><img src="image/logo-japan-times.png" alt=""></div>
+            </div>
+          </div>
+          <div class="carousel-btns">
+            <span class="carousel-btn btn1 green">　</span>
+            <span class="carousel-btn btn2">　</span>
+            <span class="carousel-btn btn3">　</span>
+            <span class="carousel-btn btn4">　</span>
+            <span class="carousel-btn btn5">　</span>
+            <span class="carousel-btn btn6">　</span>
+          </div>
+        </div>
+      </body>
+      </html>

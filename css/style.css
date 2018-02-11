@@ -1,0 +1,125 @@
+html {
+    overflow-y:scroll;
+}
+
+body {
+    margin:0;
+    padding:0;
+    line-height:1.6;
+    letter-spacing:1px;
+    font-family:"Hiragino Kaku Gothic Pro",HiraKakuPro-W3,"ヒラギノ角ゴ Pro W3","メイリオ", Meiryo,"ＭＳ Ｐゴシック",verdana,sans-serif;
+    font-size:13px;
+    color:#000;
+}
+
+.wrap {
+    width:830px;
+    margin:50px auto;
+}
+
+.slide {
+    position:relative;
+    width:830px;
+    height:150px;
+    overflow:hidden;
+    padding-bottom:25px;
+}
+
+.carousel {
+    position:absolute;
+    overflow:hidden;
+    width:760px;
+    left:35px;
+}
+
+.slidePrev {
+    width:30px;
+    height:150px;
+    position:absolute;
+    top:0;
+    left:0;
+    cursor:pointer;
+    z-index:100;
+    background:url(../images/nav.gif) 0px 0 no-repeat;
+}
+
+.slidePrev.hover {
+    background:url(../images/nav.gif) -30px 0 no-repeat;
+}
+
+.slidePrev.hidden {
+    cursor:default;
+    background:url(../images/nav.gif) -60px 0 no-repeat;
+}
+
+.slideNext {
+    display:block;
+    width:30px;
+    height:150px;
+    position:absolute;
+    top:0;
+    right:0;
+    cursor:pointer;
+    z-index:100;
+    background:url(../images/nav.gif) -90px 0 no-repeat;
+}
+
+.slideNext.hover {
+    background:url(../images/nav.gif) -120px 0 no-repeat;
+}
+
+.slideNext.hidden {
+    cursor:default;
+    background:url(../images/nav.gif) -150px 0 no-repeat;
+}
+
+.slideInner {
+    position:relative;
+    margin:0;
+    padding:0;
+}
+
+.slideInner li {
+    float:left;
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+.slideInner li img {
+    margin:0;
+    padding:0;
+    padding:0 5px 0 0;
+}
+
+.controlNav {
+    position:absolute;
+    float:left;
+    left:50%;
+    bottom:0;
+}
+
+.controlNav span {
+    position:relative;
+    left:-50%;
+    float:left;
+    margin:5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    width:10px;
+    height:10px;
+    overflow:hidden;
+    text-indent:-9999px;
+    vertical-align:middle;
+    background:#ddd;
+}
+
+.controlNav span:hover {
+    background:#ccc;
+    cursor:pointer;
+}
+
+.controlNav span.current {
+    background:#b7bd50;
+}
